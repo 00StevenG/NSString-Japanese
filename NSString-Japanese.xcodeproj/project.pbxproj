@@ -18,6 +18,7 @@
 		E9198E581721B5DE0044D486 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9198E571721B5DE0044D486 /* Default-568h@2x.png */; };
 		E9198E5B1721B5DE0044D486 /* SLGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9198E5A1721B5DE0044D486 /* SLGViewController.m */; };
 		E9198E5E1721B5DE0044D486 /* SLGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9198E5C1721B5DE0044D486 /* SLGViewController.xib */; };
+		E9198E661721B5F30044D486 /* NSString+Japanese.m in Sources */ = {isa = PBXBuildFile; fileRef = E9198E641721B5F30044D486 /* NSString+Japanese.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		E9198E591721B5DE0044D486 /* SLGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLGViewController.h; sourceTree = "<group>"; };
 		E9198E5A1721B5DE0044D486 /* SLGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLGViewController.m; sourceTree = "<group>"; };
 		E9198E5D1721B5DE0044D486 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLGViewController.xib; sourceTree = "<group>"; };
+		E9198E641721B5F30044D486 /* NSString+Japanese.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Japanese.m"; sourceTree = "<group>"; };
+		E9198E651721B5F30044D486 /* NSString+Japanese.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Japanese.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,8 @@
 		E9198E351721B5DE0044D486 = {
 			isa = PBXGroup;
 			children = (
+				E9198E641721B5F30044D486 /* NSString+Japanese.m */,
+				E9198E651721B5F30044D486 /* NSString+Japanese.h */,
 				E9198E471721B5DE0044D486 /* NSString-Japanese */,
 				E9198E401721B5DE0044D486 /* Frameworks */,
 				E9198E3F1721B5DE0044D486 /* Products */,
@@ -177,6 +182,7 @@
 				E9198E4E1721B5DE0044D486 /* main.m in Sources */,
 				E9198E521721B5DE0044D486 /* SLGAppDelegate.m in Sources */,
 				E9198E5B1721B5DE0044D486 /* SLGViewController.m in Sources */,
+				E9198E661721B5F30044D486 /* NSString+Japanese.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

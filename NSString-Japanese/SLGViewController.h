@@ -10,4 +10,10 @@
 
 @interface SLGViewController : UIViewController
 
+
+@property(nonatomic,readwrite)IBOutlet UILabel *selectedTextLabel;
+@property(nonatomic,readwrite)IBOutlet UITextView* textView;
+@property(nonatomic,readwrite)IBOutlet UILabel* romajiLabel;
+
+
 @end
