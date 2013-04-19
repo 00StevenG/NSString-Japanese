@@ -1,0 +1,308 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E9198E421721B5DE0044D486 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9198E411721B5DE0044D486 /* UIKit.framework */; };
+		E9198E441721B5DE0044D486 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9198E431721B5DE0044D486 /* Foundation.framework */; };
+		E9198E461721B5DE0044D486 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9198E451721B5DE0044D486 /* CoreGraphics.framework */; };
+		E9198E4C1721B5DE0044D486 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9198E4A1721B5DE0044D486 /* InfoPlist.strings */; };
+		E9198E4E1721B5DE0044D486 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E9198E4D1721B5DE0044D486 /* main.m */; };
+		E9198E521721B5DE0044D486 /* SLGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E9198E511721B5DE0044D486 /* SLGAppDelegate.m */; };
+		E9198E541721B5DE0044D486 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = E9198E531721B5DE0044D486 /* Default.png */; };
+		E9198E561721B5DE0044D486 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9198E551721B5DE0044D486 /* Default@2x.png */; };
+		E9198E581721B5DE0044D486 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9198E571721B5DE0044D486 /* Default-568h@2x.png */; };
+		E9198E5B1721B5DE0044D486 /* SLGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9198E5A1721B5DE0044D486 /* SLGViewController.m */; };
+		E9198E5E1721B5DE0044D486 /* SLGViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9198E5C1721B5DE0044D486 /* SLGViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		E9198E3E1721B5DE0044D486 /* NSString-Japanese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSString-Japanese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9198E411721B5DE0044D486 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		E9198E431721B5DE0044D486 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		E9198E451721B5DE0044D486 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E9198E491721B5DE0044D486 /* NSString-Japanese-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSString-Japanese-Info.plist"; sourceTree = "<group>"; };
+		E9198E4B1721B5DE0044D486 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9198E4D1721B5DE0044D486 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E9198E4F1721B5DE0044D486 /* NSString-Japanese-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString-Japanese-Prefix.pch"; sourceTree = "<group>"; };
+		E9198E501721B5DE0044D486 /* SLGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLGAppDelegate.h; sourceTree = "<group>"; };
+		E9198E511721B5DE0044D486 /* SLGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLGAppDelegate.m; sourceTree = "<group>"; };
+		E9198E531721B5DE0044D486 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		E9198E551721B5DE0044D486 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		E9198E571721B5DE0044D486 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		E9198E591721B5DE0044D486 /* SLGViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SLGViewController.h; sourceTree = "<group>"; };
+		E9198E5A1721B5DE0044D486 /* SLGViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLGViewController.m; sourceTree = "<group>"; };
+		E9198E5D1721B5DE0044D486 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SLGViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E9198E3B1721B5DE0044D486 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9198E421721B5DE0044D486 /* UIKit.framework in Frameworks */,
+				E9198E441721B5DE0044D486 /* Foundation.framework in Frameworks */,
+				E9198E461721B5DE0044D486 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E9198E351721B5DE0044D486 = {
+			isa = PBXGroup;
+			children = (
+				E9198E471721B5DE0044D486 /* NSString-Japanese */,
+				E9198E401721B5DE0044D486 /* Frameworks */,
+				E9198E3F1721B5DE0044D486 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E9198E3F1721B5DE0044D486 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9198E3E1721B5DE0044D486 /* NSString-Japanese.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E9198E401721B5DE0044D486 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E9198E411721B5DE0044D486 /* UIKit.framework */,
+				E9198E431721B5DE0044D486 /* Foundation.framework */,
+				E9198E451721B5DE0044D486 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E9198E471721B5DE0044D486 /* NSString-Japanese */ = {
+			isa = PBXGroup;
+			children = (
+				E9198E501721B5DE0044D486 /* SLGAppDelegate.h */,
+				E9198E511721B5DE0044D486 /* SLGAppDelegate.m */,
+				E9198E591721B5DE0044D486 /* SLGViewController.h */,
+				E9198E5A1721B5DE0044D486 /* SLGViewController.m */,
+				E9198E5C1721B5DE0044D486 /* SLGViewController.xib */,
+				E9198E481721B5DE0044D486 /* Supporting Files */,
+			);
+			path = "NSString-Japanese";
+			sourceTree = "<group>";
+		};
+		E9198E481721B5DE0044D486 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E9198E491721B5DE0044D486 /* NSString-Japanese-Info.plist */,
+				E9198E4A1721B5DE0044D486 /* InfoPlist.strings */,
+				E9198E4D1721B5DE0044D486 /* main.m */,
+				E9198E4F1721B5DE0044D486 /* NSString-Japanese-Prefix.pch */,
+				E9198E531721B5DE0044D486 /* Default.png */,
+				E9198E551721B5DE0044D486 /* Default@2x.png */,
+				E9198E571721B5DE0044D486 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E9198E3D1721B5DE0044D486 /* NSString-Japanese */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9198E611721B5DE0044D486 /* Build configuration list for PBXNativeTarget "NSString-Japanese" */;
+			buildPhases = (
+				E9198E3A1721B5DE0044D486 /* Sources */,
+				E9198E3B1721B5DE0044D486 /* Frameworks */,
+				E9198E3C1721B5DE0044D486 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSString-Japanese";
+			productName = "NSString-Japanese";
+			productReference = E9198E3E1721B5DE0044D486 /* NSString-Japanese.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E9198E361721B5DE0044D486 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SLG;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Steven Grace";
+			};
+			buildConfigurationList = E9198E391721B5DE0044D486 /* Build configuration list for PBXProject "NSString-Japanese" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = E9198E351721B5DE0044D486;
+			productRefGroup = E9198E3F1721B5DE0044D486 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E9198E3D1721B5DE0044D486 /* NSString-Japanese */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E9198E3C1721B5DE0044D486 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9198E4C1721B5DE0044D486 /* InfoPlist.strings in Resources */,
+				E9198E541721B5DE0044D486 /* Default.png in Resources */,
+				E9198E561721B5DE0044D486 /* Default@2x.png in Resources */,
+				E9198E581721B5DE0044D486 /* Default-568h@2x.png in Resources */,
+				E9198E5E1721B5DE0044D486 /* SLGViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E9198E3A1721B5DE0044D486 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9198E4E1721B5DE0044D486 /* main.m in Sources */,
+				E9198E521721B5DE0044D486 /* SLGAppDelegate.m in Sources */,
+				E9198E5B1721B5DE0044D486 /* SLGViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		E9198E4A1721B5DE0044D486 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9198E4B1721B5DE0044D486 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		E9198E5C1721B5DE0044D486 /* SLGViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E9198E5D1721B5DE0044D486 /* en */,
+			);
+			name = SLGViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E9198E5F1721B5DE0044D486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		E9198E601721B5DE0044D486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E9198E621721B5DE0044D486 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSString-Japanese/NSString-Japanese-Prefix.pch";
+				INFOPLIST_FILE = "NSString-Japanese/NSString-Japanese-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E9198E631721B5DE0044D486 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSString-Japanese/NSString-Japanese-Prefix.pch";
+				INFOPLIST_FILE = "NSString-Japanese/NSString-Japanese-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E9198E391721B5DE0044D486 /* Build configuration list for PBXProject "NSString-Japanese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9198E5F1721B5DE0044D486 /* Debug */,
+				E9198E601721B5DE0044D486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9198E611721B5DE0044D486 /* Build configuration list for PBXNativeTarget "NSString-Japanese" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E9198E621721B5DE0044D486 /* Debug */,
+				E9198E631721B5DE0044D486 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E9198E361721B5DE0044D486 /* Project object */;
+}
