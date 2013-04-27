@@ -210,6 +210,7 @@ char_class getCharClass(unichar c){
         CFRelease(mString);
         return resultString;
     }
+    CFRelease(mString);
     return  nil;
 }
 //
@@ -232,13 +233,18 @@ char_class getCharClass(unichar c){
     while(result !=kCFStringTokenizerTokenNone){
         
         CFTypeRef cTypeRef =  CFStringTokenizerCopyCurrentTokenAttribute(tok,kCFStringTokenizerAttributeLatinTranscription);
+        
         if(separator){
             [aLatinString appendFormat:@"%@%@",separator,cTypeRef];
         }
         else{
             [aLatinString appendFormat:@"%@",cTypeRef];
         }
+        CFRelease(cTypeRef);
+        
         result =CFStringTokenizerAdvanceToNextToken(tok);
+        
+        
     }
     
     CFRelease(tok);

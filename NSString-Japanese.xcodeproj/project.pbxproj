@@ -59,8 +59,8 @@
 		E9198E351721B5DE0044D486 = {
 			isa = PBXGroup;
 			children = (
-				E9198E641721B5F30044D486 /* NSString+Japanese.m */,
 				E9198E651721B5F30044D486 /* NSString+Japanese.h */,
+				E9198E641721B5F30044D486 /* NSString+Japanese.m */,
 				E9198E471721B5DE0044D486 /* NSString-Japanese */,
 				E9198E401721B5DE0044D486 /* Frameworks */,
 				E9198E3F1721B5DE0044D486 /* Products */,
@@ -307,6 +307,7 @@
 				E9198E631721B5DE0044D486 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

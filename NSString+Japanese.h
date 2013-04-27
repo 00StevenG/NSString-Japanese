@@ -36,7 +36,6 @@ typedef enum{
 +(NSArray*)possibleJapaneseCompletionsForString:(NSString*)aString;
 
 
-
 // transliteration
 -(NSString*)stringByTransliteratingJapaneseToRomajiWithWordSeperator:(NSString*)separator;
 
