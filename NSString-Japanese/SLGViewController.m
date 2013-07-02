@@ -35,6 +35,8 @@
     
     self.textView.text = jaText;
     
+    self.outputLabel.text = [jaText stringByReplacingJapaneseKanjiWithHiragana];
+   
 }
 //
 //
@@ -52,33 +54,46 @@
     
     NSRange range = _textView.selectedRange;
     if(range.length==0){
-        _selectedTextLabel.text = @"";
-        _romajiLabel.text = @"";
+        self.selectedTextLabel.text = @"";
+        self.outputLabel.text = @"";
         return;
     }
     
     NSString* selectedString = [_textView.text substringWithRange:range];
     
-    _romajiLabel.text = [selectedString stringByTransliteratingJapaneseToRomajiWithWordSeperator:@" "];
+
+    switch ([self.segementedControl selectedSegmentIndex]) {
+        case 0:
+            self.outputLabel.text = [selectedString stringByTransliteratingJapaneseToRomajiWithWordSeperator:@" "]; 
+            break;
+        case 1:
+            self.outputLabel.text = [selectedString stringByReplacingJapaneseKanjiWithHiragana];
+            break;
+        default:{
+            [NSException raise:NSInternalInconsistencyException
+                        format:@"Unhandled case in %s",__PRETTY_FUNCTION__];
+        }
+            break;
+    }
     
     
     SLGJapaneseStringType type = [NSString japaneseStringTypeForString:selectedString];
     
     switch (type) {
         case SLGJapaneseStringTypeHiragana:
-            _selectedTextLabel.text = @"Hiragana";
+            self.selectedTextLabel.text = @"Hiragana";
             break;
         case SLGJapaneseStringTypeKanji:
-            _selectedTextLabel.text = @"Kanji";
+            self.selectedTextLabel.text = @"Kanji";
             break;
         case SLGJapaneseStringTypeKatakana:
-            _selectedTextLabel.text = @"Katakana";
+            self.selectedTextLabel.text = @"Katakana";
             break;
         case SLGJapaneseStringTypeCompound:
-            _selectedTextLabel.text = @"Compound";
+            self.selectedTextLabel.text = @"Compound";
             break;
         case SLGJapaneseStringTypeOther:
-            _selectedTextLabel.text = @"Other";
+            self.selectedTextLabel.text = @"Other";
             break;
             
         default:{

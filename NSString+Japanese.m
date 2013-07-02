@@ -177,6 +177,8 @@ char_class getCharClass(unichar c){
     }
     
     return  aType;
+    
+    
 }
 //
 //
@@ -286,6 +288,123 @@ char_class getCharClass(unichar c){
     
     return [NSString _transliterateString:self
                             withTransform:kCFStringTransformLatinHiragana];
+    
+}
+//
+//
+//
+-(NSString*)stringByReplacingJapaneseKanjiWithHiragana{
+    
+    NSMutableString* kanjiFree = [[NSMutableString alloc]init];
+    
+    // create a tokenizer to enumerate by WORD
+    CFStringTokenizerRef tok = CFStringTokenizerCreate(NULL,
+                                                       (CFStringRef)self,
+                                                       CFRangeMake(0,self.length),
+                                                       kCFStringTokenizerUnitWord,
+                                                       NULL);
+    // goto the first token in the string
+    CFStringTokenizerTokenType result  =CFStringTokenizerAdvanceToNextToken(tok);
+    
+    // enumerate the string
+    while(result !=kCFStringTokenizerTokenNone){
+        
+        CFRange currentRange = CFStringTokenizerGetCurrentTokenRange(tok);
+        NSString* subString = [self substringWithRange:NSMakeRange(currentRange.location, currentRange.length)];
+    
+        // check the type of the substring
+        SLGJapaneseStringType type = [[self class]japaneseStringTypeForString:subString];
+        
+        
+        // for kanji or strings with a combination(kanij+hiragana) of characters convert to hirgana
+        if(type == SLGJapaneseStringTypeKanji || type == SLGJapaneseStringTypeCompound){
+            NSString* hiragana = [subString stringByTransliteratingJapaneseToHiragana];
+            [kanjiFree appendFormat:@"%@",hiragana];
+        }
+        else{
+            // othewise just append the substring as is
+            [kanjiFree appendFormat:@"%@",subString];            
+        }
+        
+        result =CFStringTokenizerAdvanceToNextToken(tok);
+    }
+    
+    CFRelease(tok);
+
+    return [kanjiFree copy];
+    
+
+}
+#pragma mark - Phonetic Methods
+//
+//
+//
+-(CGFloat)phoneticSimilarityToString:(NSString*)string{
+    
+   return [self phoneticSimilarityToString:string isLatinScript:NO];
+}
+//
+//
+//
+-(CGFloat)phoneticSimilarityToString:(NSString*)string isLatinScript:(BOOL)isLatinScript{
+    
+    
+    NSString* sourceString= self;
+    
+    if(isLatinScript==NO)
+        sourceString = [self stringByTransliteratingJapaneseToHiragana];
+    
+    
+    __block NSMutableSet* sourceSet = [[NSMutableSet alloc]init];
+
+    [sourceString enumerateSubstringsInRange:NSMakeRange(0,[sourceString length])
+                                 options:NSStringEnumerationByComposedCharacterSequences
+                              usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                        
+                                  if(isLatinScript==NO){
+                                        [sourceSet addObject:[substring stringByTransliteratingJapaneseToRomaji]];
+                                  }
+                                  else{
+                                      [sourceSet addObject:substring];
+                                  }
+                        
+                              }];
+    
+    
+    
+   NSString* targetString = string;
+    
+   if(isLatinScript==NO)
+       [string stringByTransliteratingJapaneseToHiragana];
+
+    __block NSMutableSet* targetSet = [[NSMutableSet alloc]init];
+    
+    [targetString enumerateSubstringsInRange:NSMakeRange(0,[targetString length])
+                                     options:NSStringEnumerationByComposedCharacterSequences
+                                  usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+                                      
+                                      if(isLatinScript==NO){
+                                          [targetSet addObject:[substring stringByTransliteratingJapaneseToRomaji]];
+                                      }
+                                      else{
+                                          [targetSet addObject:substring];
+                                      }
+                                    
+                                  }];
+    
+    CGFloat sourceTotal = [sourceSet count];
+    CGFloat targetTotal = [targetSet count];
+    
+    CGFloat lengthRatio = fabsf(sourceTotal-targetTotal)/(MAX(sourceTotal,targetTotal));
+    
+
+    // remove the source sounds from the target
+    // the result are the  target sounds not contained in the source
+    [targetSet minusSet:sourceSet];
+    CGFloat adjustedCount = [targetSet count];
+    
+
+    return (1- (adjustedCount/targetTotal)*(1-lengthRatio));
     
 }
 #pragma mark - predictive Text

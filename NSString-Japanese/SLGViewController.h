@@ -13,7 +13,8 @@
 
 @property(nonatomic,readwrite)IBOutlet UILabel *selectedTextLabel;
 @property(nonatomic,readwrite)IBOutlet UITextView* textView;
-@property(nonatomic,readwrite)IBOutlet UILabel* romajiLabel;
+@property(nonatomic,readwrite)IBOutlet UILabel* outputLabel;
+@property(nonatomic,readwrite)IBOutlet UISegmentedControl* segementedControl;
 
 
 @end
