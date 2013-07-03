@@ -21,7 +21,6 @@ typedef enum{
 
 
 
-
 @interface NSString (NSString_Japanese)
 
 
