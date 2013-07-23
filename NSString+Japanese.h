@@ -30,8 +30,6 @@ typedef enum{
 // checks if any of the chars in the string are katakana or hiragana or kanij
 +(BOOL)stringContainsJapaneseText:(NSString*)aString;
 
-// convenience function to get the the predictive Inputs results (via UITExtChecker) for the passed string
-+(NSArray*)possibleJapaneseCompletionsForString:(NSString*)aString;
 
 // transliteration
 

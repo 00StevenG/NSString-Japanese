@@ -407,19 +407,6 @@ char_class getCharClass(unichar c){
     return (1- (adjustedCount/targetTotal)*(1-lengthRatio));
     
 }
-#pragma mark - predictive Text
-//
-//
-//
-+(NSArray*)possibleJapaneseCompletionsForString:(NSString*)aString{
-    
-    UITextChecker* checker = [[UITextChecker alloc]init];
-    
-    NSArray* results = [checker completionsForPartialWordRange:NSMakeRange(0,[aString length])
-                                                      inString:aString
-                                                      language:@"JA"];
-    return results;
-}
 
 
 @end
