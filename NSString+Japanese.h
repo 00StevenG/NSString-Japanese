@@ -20,7 +20,6 @@ typedef enum{
 }SLGJapaneseStringType;
 
 
-
 @interface NSString (NSString_Japanese)
 
 
