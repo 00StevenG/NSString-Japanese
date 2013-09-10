@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E9192DB417CE432E00724C98 /* SLGDemoWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = E9192DB317CE432E00724C98 /* SLGDemoWindow.m */; };
+		E9192DB717CE485F00724C98 /* SLGDemoLoupeView.m in Sources */ = {isa = PBXBuildFile; fileRef = E9192DB617CE485F00724C98 /* SLGDemoLoupeView.m */; };
+		E9192DB917CE48A600724C98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9192DB817CE48A600724C98 /* QuartzCore.framework */; };
+		E9192DBF17CE799500724C98 /* loupeGlass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E9192DBE17CE799500724C98 /* loupeGlass@2x.png */; };
 		E9198E421721B5DE0044D486 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9198E411721B5DE0044D486 /* UIKit.framework */; };
 		E9198E441721B5DE0044D486 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9198E431721B5DE0044D486 /* Foundation.framework */; };
 		E9198E461721B5DE0044D486 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9198E451721B5DE0044D486 /* CoreGraphics.framework */; };
@@ -22,6 +26,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E9192DB217CE432E00724C98 /* SLGDemoWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGDemoWindow.h; sourceTree = "<group>"; };
+		E9192DB317CE432E00724C98 /* SLGDemoWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGDemoWindow.m; sourceTree = "<group>"; };
+		E9192DB517CE485F00724C98 /* SLGDemoLoupeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SLGDemoLoupeView.h; sourceTree = "<group>"; };
+		E9192DB617CE485F00724C98 /* SLGDemoLoupeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SLGDemoLoupeView.m; sourceTree = "<group>"; };
+		E9192DB817CE48A600724C98 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E9192DBE17CE799500724C98 /* loupeGlass@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loupeGlass@2x.png"; sourceTree = "<group>"; };
 		E9198E3E1721B5DE0044D486 /* NSString-Japanese.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSString-Japanese.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9198E411721B5DE0044D486 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E9198E431721B5DE0044D486 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9192DB917CE48A600724C98 /* QuartzCore.framework in Frameworks */,
 				E9198E421721B5DE0044D486 /* UIKit.framework in Frameworks */,
 				E9198E441721B5DE0044D486 /* Foundation.framework in Frameworks */,
 				E9198E461721B5DE0044D486 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +73,7 @@
 				E9198E651721B5F30044D486 /* NSString+Japanese.h */,
 				E9198E641721B5F30044D486 /* NSString+Japanese.m */,
 				E9198E471721B5DE0044D486 /* NSString-Japanese */,
+				E9198E481721B5DE0044D486 /* Supporting Files */,
 				E9198E401721B5DE0044D486 /* Frameworks */,
 				E9198E3F1721B5DE0044D486 /* Products */,
 			);
@@ -78,6 +90,7 @@
 		E9198E401721B5DE0044D486 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E9192DB817CE48A600724C98 /* QuartzCore.framework */,
 				E9198E411721B5DE0044D486 /* UIKit.framework */,
 				E9198E431721B5DE0044D486 /* Foundation.framework */,
 				E9198E451721B5DE0044D486 /* CoreGraphics.framework */,
@@ -88,12 +101,15 @@
 		E9198E471721B5DE0044D486 /* NSString-Japanese */ = {
 			isa = PBXGroup;
 			children = (
+				E9192DB517CE485F00724C98 /* SLGDemoLoupeView.h */,
+				E9192DB617CE485F00724C98 /* SLGDemoLoupeView.m */,
 				E9198E501721B5DE0044D486 /* SLGAppDelegate.h */,
 				E9198E511721B5DE0044D486 /* SLGAppDelegate.m */,
 				E9198E591721B5DE0044D486 /* SLGViewController.h */,
 				E9198E5A1721B5DE0044D486 /* SLGViewController.m */,
 				E9198E5C1721B5DE0044D486 /* SLGViewController.xib */,
-				E9198E481721B5DE0044D486 /* Supporting Files */,
+				E9192DB217CE432E00724C98 /* SLGDemoWindow.h */,
+				E9192DB317CE432E00724C98 /* SLGDemoWindow.m */,
 			);
 			path = "NSString-Japanese";
 			sourceTree = "<group>";
@@ -101,6 +117,7 @@
 		E9198E481721B5DE0044D486 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E9192DBE17CE799500724C98 /* loupeGlass@2x.png */,
 				E9198E491721B5DE0044D486 /* NSString-Japanese-Info.plist */,
 				E9198E4A1721B5DE0044D486 /* InfoPlist.strings */,
 				E9198E4D1721B5DE0044D486 /* main.m */,
@@ -110,6 +127,7 @@
 				E9198E571721B5DE0044D486 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			path = "NSString-Japanese";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +187,7 @@
 				E9198E561721B5DE0044D486 /* Default@2x.png in Resources */,
 				E9198E581721B5DE0044D486 /* Default-568h@2x.png in Resources */,
 				E9198E5E1721B5DE0044D486 /* SLGViewController.xib in Resources */,
+				E9192DBF17CE799500724C98 /* loupeGlass@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +202,8 @@
 				E9198E521721B5DE0044D486 /* SLGAppDelegate.m in Sources */,
 				E9198E5B1721B5DE0044D486 /* SLGViewController.m in Sources */,
 				E9198E661721B5F30044D486 /* NSString+Japanese.m in Sources */,
+				E9192DB417CE432E00724C98 /* SLGDemoWindow.m in Sources */,
+				E9192DB717CE485F00724C98 /* SLGDemoLoupeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +294,7 @@
 				GCC_PREFIX_HEADER = "NSString-Japanese/NSString-Japanese-Prefix.pch";
 				INFOPLIST_FILE = "NSString-Japanese/NSString-Japanese-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -284,6 +306,7 @@
 				GCC_PREFIX_HEADER = "NSString-Japanese/NSString-Japanese-Prefix.pch";
 				INFOPLIST_FILE = "NSString-Japanese/NSString-Japanese-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
