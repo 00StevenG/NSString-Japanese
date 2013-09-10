@@ -7,6 +7,7 @@
 //
 
 #import "SLGAppDelegate.h"
+#import "SLGDemoWindow.h"
 
 #import "SLGViewController.h"
 
@@ -14,7 +15,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window = [[SLGDemoWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[SLGViewController alloc] initWithNibName:@"SLGViewController" bundle:nil];
     self.window.rootViewController = self.viewController;

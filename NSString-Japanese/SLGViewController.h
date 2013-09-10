@@ -11,10 +11,18 @@
 @interface SLGViewController : UIViewController
 
 
-@property(nonatomic,readwrite)IBOutlet UILabel *selectedTextLabel;
-@property(nonatomic,readwrite)IBOutlet UITextView* textView;
-@property(nonatomic,readwrite)IBOutlet UILabel* outputLabel;
-@property(nonatomic,readwrite)IBOutlet UISegmentedControl* segementedControl;
+@property(nonatomic,readwrite,assign)IBOutlet UILabel *selectedTextLabel;
+@property(nonatomic,readwrite,assign)IBOutlet UITextView *visibleTextView;
+@property(nonatomic,readwrite,assign)IBOutlet UITextView *secretTextView;
+@property(nonatomic,readwrite,assign)IBOutlet UISegmentedControl *segementedControl;
+
+@property(nonatomic,readwrite,assign)IBOutlet UISwitch* editableSwitch;
+@property(nonatomic,readwrite,assign)IBOutlet UISwitch* languageLoupeSwitch;
+
+
+-(IBAction)editableSwitchAction:(id)sender;
+-(IBAction)languageLoupeSwitchAction:(id)sender;
+
 
 
 @end
