@@ -104,13 +104,13 @@
 
 <pre><code>-(UIView*)viewForHitTest:(SLGDemoWindow*)window withPoint:(CGPoint)point event:(UIEvent*)event andOriginalView:(UIView*)originalView{
 
-    if(_textView.editable)
+    if(self.visibleTextView.editable)
         return originalView;
 
-    if(!_languageLoupeSwitch.on)
+    if(!self.languageLoupeSwitch.on)
         return originalView;
 
-    if([originalView isDescendantOfView:_textView]){
+    if([originalView isDescendantOfView:self.visibleTextView]){
         return self.view;
     }
     return originalView;
@@ -192,7 +192,7 @@ To accomplish this, we create another textview and insert it behind the visible 
 
 <p>**The subviews of UITextView (UITextRangeView and UISelectionGrabber) are private classes so [UIView isDescendantOfView] is a good candidate for checking without explicitly referring to those classes.</p>
 
-<p>***The demo ViewController contains some methods around calculating the text positions and paths. There’s a much more complete set of methods located <a href="https://github.com/works5/UITextViewExtras">here</a>.</p>
+<p>***The demo ViewController contains some methods around calculating the text positions and paths. There’s a much more complete set of methods located <a href="https://github.com/00StevenG/UITextViewExtras">here</a>.</p>
 
 <h1>
 <a name="final-thoughts" class="anchor" href="#final-thoughts"><span class="octicon octicon-link"></span></a>Final Thoughts</h1>
