@@ -227,7 +227,7 @@ char_class getCharClass(unichar c){
                                                        (CFStringRef)self,
                                                        CFRangeMake(0,self.length),
                                                        kCFStringTokenizerUnitWord,
-                                                       NULL);
+                                                       CFLocaleCreate(kCFAllocatorDefault, CFSTR("Japanese")));
     // goto the first token in the string
     CFStringTokenizerTokenType result  =CFStringTokenizerAdvanceToNextToken(tok);
     
@@ -302,7 +302,7 @@ char_class getCharClass(unichar c){
                                                        (CFStringRef)self,
                                                        CFRangeMake(0,self.length),
                                                        kCFStringTokenizerUnitWord,
-                                                       NULL);
+                                                       CFLocaleCreate(kCFAllocatorDefault, CFSTR("Japanese")));
     // goto the first token in the string
     CFStringTokenizerTokenType result  =CFStringTokenizerAdvanceToNextToken(tok);
     
