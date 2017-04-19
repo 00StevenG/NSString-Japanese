@@ -205,6 +205,11 @@ char_class getCharClass(unichar c){
     
     CFMutableStringRef mString = CFStringCreateMutableCopy(kCFAllocatorDefault,0,(CFStringRef)source);
     
+
+    if (mString == NULL) {
+        return source;
+    }
+
     BOOL result = CFStringTransform(mString,NULL,aTransform,NO);
     
     if(result){
@@ -235,15 +240,27 @@ char_class getCharClass(unichar c){
     while(result !=kCFStringTokenizerTokenNone){
         
         CFTypeRef cTypeRef =  CFStringTokenizerCopyCurrentTokenAttribute(tok,kCFStringTokenizerAttributeLatinTranscription);
-        
-        if(separator){
-            [aLatinString appendFormat:@"%@%@",separator,cTypeRef];
+
+        if (cTypeRef != NULL) {
+            if(separator){
+                [aLatinString appendFormat:@"%@%@",separator,cTypeRef];
+            }
+            else{
+                [aLatinString appendFormat:@"%@",cTypeRef];
+            }
+            CFRelease(cTypeRef);
+        } else {
+            CFRange range = CFStringTokenizerGetCurrentTokenRange(tok);
+            if (range.location != kCFNotFound && range.location + range.length < CFStringGetLength((CFStringRef)self)) {
+                NSString *unmodified = (__bridge_transfer NSString *)CFStringCreateWithSubstring(nil, (CFStringRef)self, range);
+                if (separator) {
+                    [aLatinString appendFormat:@"%@%@", separator, unmodified];
+                } else {
+                    [aLatinString appendFormat:@"%@", unmodified];
+                }
+            }
         }
-        else{
-            [aLatinString appendFormat:@"%@",cTypeRef];
-        }
-        CFRelease(cTypeRef);
-        
+
         result =CFStringTokenizerAdvanceToNextToken(tok);
         
         
