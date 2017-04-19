@@ -83,7 +83,7 @@ The folllowing code was extracted from:
 #define IN_RANGE(x, low, high)  ((low<=(x))&&((x)<=high))
 #define IS_JA_HIRAGANA(x)   IN_RANGE(x, 0x3040, 0x309F)
 #define IS_JA_KATAKANA(x)   ((IN_RANGE(x, 0x30A0, 0x30FF)&&((x)!=0x30FB))||IN_RANGE(x, 0xFF66, 0xFF9F))
-#define IS_JA_KANJI(x)      (IN_RANGE(x, 0x2E80, 0x2EFF)||IN_RANGE(x, 0x2F00, 0x2FDF)||IN_RANGE(x, 0x4E00, 0x9FAF))
+#define IS_JA_KANJI(x)      (IN_RANGE(x, 0x2E80, 0x2EFF)||IN_RANGE(x, 0x2F00, 0x2FDF)||IN_RANGE(x, 0x4E00, 0x9FAF)||((x)==0x3005))
 #define IS_JA_KUTEN(x)      (((x)==0x3001)||((x)==0xFF64)||((x)==0xFF0E))
 #define IS_JA_TOUTEN(x)     (((x)==0x3002)||((x)==0xFF61)||((x)==0xFF0C))
 #define IS_JA_SPACE(x)      ((x)==0x3000)
@@ -205,6 +205,11 @@ char_class getCharClass(unichar c){
     
     CFMutableStringRef mString = CFStringCreateMutableCopy(kCFAllocatorDefault,0,(CFStringRef)source);
     
+
+    if (mString == NULL) {
+        return source;
+    }
+
     BOOL result = CFStringTransform(mString,NULL,aTransform,NO);
     
     if(result){
@@ -235,15 +240,27 @@ char_class getCharClass(unichar c){
     while(result !=kCFStringTokenizerTokenNone){
         
         CFTypeRef cTypeRef =  CFStringTokenizerCopyCurrentTokenAttribute(tok,kCFStringTokenizerAttributeLatinTranscription);
-        
-        if(separator){
-            [aLatinString appendFormat:@"%@%@",separator,cTypeRef];
+
+        if (cTypeRef != NULL) {
+            if(separator){
+                [aLatinString appendFormat:@"%@%@",separator,cTypeRef];
+            }
+            else{
+                [aLatinString appendFormat:@"%@",cTypeRef];
+            }
+            CFRelease(cTypeRef);
+        } else {
+            CFRange range = CFStringTokenizerGetCurrentTokenRange(tok);
+            if (range.location != kCFNotFound && range.location + range.length < CFStringGetLength((CFStringRef)self)) {
+                NSString *unmodified = (__bridge_transfer NSString *)CFStringCreateWithSubstring(nil, (CFStringRef)self, range);
+                if (separator) {
+                    [aLatinString appendFormat:@"%@%@", separator, unmodified];
+                } else {
+                    [aLatinString appendFormat:@"%@", unmodified];
+                }
+            }
         }
-        else{
-            [aLatinString appendFormat:@"%@",cTypeRef];
-        }
-        CFRelease(cTypeRef);
-        
+
         result =CFStringTokenizerAdvanceToNextToken(tok);
         
         
